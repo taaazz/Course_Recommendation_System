@@ -5,6 +5,7 @@ import re
 import string 
 import tensorflow as tf
 import numpy as np
+import nltk
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from string import punctuation
 from sklearn.feature_extraction.text import TfidfVectorizer
