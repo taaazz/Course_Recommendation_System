@@ -78,6 +78,8 @@ num_courses = final_df['course_id'].nunique()
 courses_decoded = dict(zip(final_df['course_id'], final_df['name']))
 users_decoded = dict(zip(final_df['user_id'], final_df['user_id']))  
 
+tf.keras.backend.clear_session()
+
 @st.cache_resource
 def load_model():
     model = tf.keras.models.load_model('model/recommendation_model.keras', custom_objects={'RecommenderNet': RecommenderNet})

@@ -125,6 +125,7 @@ num_courses = final_df['course_id'].nunique()
 embedding_size = 50  
 model = RecommenderNet(num_users, num_courses, embedding_size)
 # # model.save('recommender_model.keras', save_format='keras', include_optimizer=False)
+tf.keras.backend.clear_session()
 
 @st.cache_resource
 def load_model_cached():
