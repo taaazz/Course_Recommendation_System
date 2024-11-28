@@ -15,21 +15,21 @@ with col2:
 
 st.subheader('About this app')
 
-st.subheader('What can this app do?')
+st.subheader('🤖What can this app do?')
 st.info(
     'Course recommender was designed to help users find the most relevant online courses that match their interests and needs. '
     'This app uses a Neural Collaborative Filtering (NCF) model. Built with the Coursera dataset, it provides personalized recommendations '
     'based on users’ past interactions and course preferences.'
 )
 
-st.subheader('How to use the app?')
+st.subheader('📝How to use the app?')
 st.warning(
     "To use the app, simply enter a keyword related to the type of course you're interested in (e.g., 'machine learning') "
     "in the text box provided. When you click 'Get Recommendations,' the app will analyze your input and suggest the most relevant courses based on similarity to other user interactions. "
     "You’ll receive a list of recommended courses with links to access them."
 )
 
-st.subheader('Datasets')
+st.subheader('📁Datasets')
 st.text('Coursera Dataset from Kaggle')
 
 
