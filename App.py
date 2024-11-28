@@ -1,12 +1,16 @@
-import streamlit as st
 from main import * 
 import tensorflow as tf
 from main import get_recommendations
 import nltk
 nltk.data.path.append('./nltk_data')
+import streamlit as st
 
+st.set_page_config(
+    page_title="Courses Recommender",  
+    page_icon="💻",           
+    layout="centered"          
+)
 
-# st.set_page_config(page_title='Course Recommender System', page_icon='📚')
 col1, col2 = st.columns([1, 4])  
 
 with col1:
