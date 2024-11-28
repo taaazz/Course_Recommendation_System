@@ -13,7 +13,7 @@ with col1:
 with col2:
     st.title('Course Recommendation System')  
 
-st.subheader('About this app')
+st.header('About this app')
 
 st.subheader('🤖What can this app do?')
 st.info(
