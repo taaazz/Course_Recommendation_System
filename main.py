@@ -173,3 +173,8 @@ def display_reviewed_courses(user_id):
         st.write(f"Kursus yang pernah di-review oleh User ID {user_id}:")
         st.dataframe(reviewed_courses)
 
+def sidebar():
+    with st.sidebar:
+        st.title("💻Course Recommender")
+        st.markdown("Find the perfect courses for any occasion. Just tell us what you're looking for!")
+        st.success("For Your Courses", icon="💙")

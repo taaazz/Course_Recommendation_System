@@ -8,7 +8,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.layers import Embedding, Dense, Flatten, Input, Concatenate
 from tensorflow.keras.models import Model
 import random
-
+from main import sidebar 
 
 final_df = pd.read_csv('dataset/data_prep.csv')
 final_rating_df = pd.read_csv('dataset/final_rating_df.csv')
@@ -178,6 +178,8 @@ with col1:
 
 with col2:
     st.title('Sistem Rekomendasi Kursus')  
+
+sidebar()
 
 user_id = st.number_input('Masukkan User ID (1 - 281001):', min_value=1, max_value=num_users, step=1)
 

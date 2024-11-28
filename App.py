@@ -32,6 +32,7 @@ st.warning(
 st.subheader('📁Datasets')
 st.text('Coursera Dataset from Kaggle')
 
+sidebar()
 
 input_text = st.text_input('Masukkan kata kunci atau deskripsi minat kursus:')
 
