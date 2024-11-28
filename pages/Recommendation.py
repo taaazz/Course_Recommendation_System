@@ -177,7 +177,7 @@ with col1:
     st.image('logo/12.png', use_column_width=True)  
 
 with col2:
-    st.title('Sistem Rekomendasi Kursus')  
+    st.title('Course Recommendation System')  
 
 sidebar()
 
