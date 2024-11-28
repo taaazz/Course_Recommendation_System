@@ -28,7 +28,7 @@ st.info(
 
 st.subheader('📝How to use the app?')
 st.warning(
-    "To use the app, simply enter a keyword related to the type of course you're interested in (e.g., 'machine learning') "
+    "To use the app, simply enter at least one keyword related to the type of course you're interested in (e.g., 'machine learning') "
     "in the text box provided. When you click 'Get Recommendations,' the app will analyze your input and suggest the most relevant courses based on similarity to other user interactions. "
     "You’ll receive a list of recommended courses with links to access them."
 )
@@ -38,7 +38,7 @@ st.text('Coursera Dataset from Kaggle')
 
 sidebar()
 
-selected = pills("Eg.", ["Machine Learning", "Music", "Game Developer", "Mathematic", "Data Analyst"], ["🤖", "💾", "🎮", "🌐","📊"],clearable=True,index=None)
+selected = pills("Eg.", ["Modern Art","Machine Learning", "Music", "Game Developer", "Mathematic", "Data Analyst"], ["🎭","🤖", "🎵", "🎮", "🧮","📊"],clearable=True,index=None)
 
 input_text = st.text_input('Enter a keyword or course interest description:',selected)
 

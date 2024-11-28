@@ -146,7 +146,7 @@ def get_user_recommendations(user_id):
     top_ratings_indices = ratings.argsort()[-10:][::-1]
 
     # Fetch the courses reviewed by the user
-    top_courses_user = reviewed_course_by_user.sort_values(by='rating', ascending=False).head(10)
+    top_courses_user = reviewed_course_by_user.head(10)  # No sorting by rating
     
     # Select top recommended courses and ensure unique names
     recommended_courses = final_df[final_df['course_id'].isin(top_ratings_indices)]

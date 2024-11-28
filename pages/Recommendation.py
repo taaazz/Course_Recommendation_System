@@ -193,12 +193,12 @@ st.subheader('📁Datasets')
 st.text('Coursera Dataset from Kaggle')
 
 st.subheader("📋 Dataset Overview")
-st.write("Berikut adalah 5 data teratas dari dataset yang digunakan:")
+st.write("Here are the top 5 data from the dataset used:")
 st.write(final_df.sample(5)) 
 
 sidebar()
 
-user_id = st.number_input('Masukkan User ID (1 - 281001):', min_value=1, max_value=num_users, step=1)
+user_id = st.number_input('Enter User ID (1 - 281001)::', min_value=1, max_value=num_users, step=1)
 
 if st.button('Get Recommendation'):
     if user_id <= num_users:
