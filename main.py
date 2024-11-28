@@ -13,7 +13,7 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 
 # Load dataset
-final_df = pd.read_csv('dataset/data_fixed.csv')
+final_df = pd.read_csv('dataset/data_fix.csv')
 
 # Define RecommenderNet class (unchanged from your original code)
 tf.keras.utils.get_custom_objects().clear()
@@ -102,15 +102,14 @@ def preprocess_text(text):
 # Fungsi untuk mencari kursus yang relevan dengan teks inputan user
 def search_courses_by_sentence(sentence, reviews):
     cleaned_sentence = preprocess_text(sentence)
-    reviews['reviews'] = reviews['reviews'].fillna('')
-    matched_courses = reviews[reviews['reviews'].str.contains(cleaned_sentence, na=False)]
+    reviews['Sequence'] = reviews['Sequence'].fillna('')
+    matched_courses = reviews[reviews['Sequence'].str.contains(cleaned_sentence, na=False)]
     return matched_courses
 
 # Fungsi untuk mendapatkan rekomendasi berdasarkan input teks
 def get_recommendations(sentence):
     matched_courses = search_courses_by_sentence(sentence, final_df)
 
-    # Mengambil ID user acak yang pernah memberikan rating untuk kursus terkait
     if matched_courses.empty:
         st.write("Tidak ada kursus yang sesuai dengan kata kunci input.")
         return pd.DataFrame(columns=['name', 'course_url', 'rating']), pd.DataFrame(columns=['name', 'course_url', 'rating'])
