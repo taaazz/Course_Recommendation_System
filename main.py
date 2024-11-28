@@ -80,7 +80,7 @@ users_decoded = dict(zip(final_df['user_id'], final_df['user_id']))
 
 tf.keras.backend.clear_session()
 
-@st.cache_resource
+@st.cache(ttl=24*3600)
 def load_model():
     model = tf.keras.models.load_model('model/recommendation_model.keras', custom_objects={'RecommenderNet': RecommenderNet})
     return model

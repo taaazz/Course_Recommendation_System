@@ -127,7 +127,7 @@ model = RecommenderNet(num_users, num_courses, embedding_size)
 # # model.save('recommender_model.keras', save_format='keras', include_optimizer=False)
 tf.keras.backend.clear_session()
 
-@st.cache_resource
+@st.cache(ttl=24*3600)
 def load_model_cached():
     model = tf.keras.models.load_model('model/recommender_model.keras', custom_objects={'RecommenderNet': RecommenderNet})
     return model
