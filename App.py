@@ -3,6 +3,7 @@ import streamlit as st
 st.set_page_config(page_title="Courses Recommender", page_icon="💻", layout="centered")         
 
 from main import * 
+from streamlit_pills import pills
 import tensorflow as tf
 from main import get_recommendations
 import nltk
@@ -37,7 +38,9 @@ st.text('Coursera Dataset from Kaggle')
 
 sidebar()
 
-input_text = st.text_input('Masukkan kata kunci atau deskripsi minat kursus:')
+selected = pills("Eg.", ["Machine Learning", "Music", "Game Developer", "Mathematic", "Data Analyst"], ["🤖", "💾", "🎮", "🌐","📊"],clearable=True,index=None)
+
+input_text = st.text_input('Enter a keyword or course interest description:',selected)
 
 if st.button('Get Recommendation'):
     if input_text:

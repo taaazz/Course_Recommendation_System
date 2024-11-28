@@ -182,6 +182,20 @@ with col1:
 with col2:
     st.title('Course Recommendation System')  
 
+st.subheader('📝How to use the app?')
+st.warning(
+    "To use the app, simply enter a user ID "
+    "in the text box provided. When you click 'Get Recommendations,' the app will analyze your input and suggest the most relevant courses based on similarity to other user interactions. "
+    "You’ll receive a list of recommended courses with links to access them."
+)
+
+st.subheader('📁Datasets')
+st.text('Coursera Dataset from Kaggle')
+
+st.subheader("📋 Dataset Overview")
+st.write("Berikut adalah 5 data teratas dari dataset yang digunakan:")
+st.write(final_df.sample(5)) 
+
 sidebar()
 
 user_id = st.number_input('Masukkan User ID (1 - 281001):', min_value=1, max_value=num_users, step=1)
