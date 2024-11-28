@@ -2,6 +2,8 @@ import streamlit as st
 from main import * 
 import tensorflow as tf
 from main import get_recommendations
+import nltk
+nltk.data.path.append('./nltk_data')
 
 
 # st.set_page_config(page_title='Course Recommender System', page_icon='📚')
