@@ -102,8 +102,8 @@ def preprocess_text(text):
 # Fungsi untuk mencari kursus yang relevan dengan teks inputan user
 def search_courses_by_sentence(sentence, reviews):
     cleaned_sentence = preprocess_text(sentence)
-    reviews['name'] = reviews['name'].fillna('')
-    matched_courses = reviews[reviews['name'].str.contains(cleaned_sentence, na=False)]
+    reviews['reviews'] = reviews['reviews'].fillna('')
+    matched_courses = reviews[reviews['reviews'].str.contains(cleaned_sentence, na=False)]
     return matched_courses
 
 # Fungsi untuk mendapatkan rekomendasi berdasarkan input teks
