@@ -1,3 +1,7 @@
+import streamlit as st
+
+st.set_page_config(page_title="Courses Recommender", page_icon="💻", layout="centered")   
+
 import os
 import pandas as pd
 import numpy as np
@@ -8,11 +12,7 @@ from tensorflow.keras.layers import Embedding, Dense, Flatten, Input, Concatenat
 from tensorflow.keras.models import Model
 import random
 from main import sidebar 
-import streamlit as st
-
-st.set_page_config(page_title="Courses Recommender", page_icon="💻", layout="centered")          
-
-
+       
 final_df = pd.read_csv('dataset/data_prep.csv')
 final_rating_df = pd.read_csv('dataset/final_rating_df.csv')
 
