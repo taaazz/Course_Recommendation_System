@@ -186,7 +186,7 @@ sidebar()
 
 user_id = st.number_input('Masukkan User ID (1 - 281001):', min_value=1, max_value=num_users, step=1)
 
-if st.button('Search'):
+if st.button('Get Recommendation'):
     if user_id <= num_users:
         top_courses_user, top_10_recommended_courses = get_recommendations(user_id)
         
